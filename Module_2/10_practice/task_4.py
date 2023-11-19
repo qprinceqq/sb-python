@@ -11,7 +11,7 @@ while True:
 
     elif choice == 2:
         with open('history_chat.txt', 'a', encoding='utf-8') as chat_file:
-            user_message = input('--> ')
+            user_message = input('  > ')
             if user_message.strip() == '':
                 print('Сообщение не может быть пустой строкой!')
             else:

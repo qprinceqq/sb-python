@@ -1,0 +1,107 @@
+{
+    "\u043d\u0430\u0437\u0432\u0430\u043d\u0438\u0435": "Millennium Falcon",
+    "\u043c\u0430\u043a\u0441\u0438\u043c\u0430\u043b\u044c\u043d\u0430\u044f \u0441\u043a\u043e\u0440\u043e\u0441\u0442\u044c": "1050",
+    "\u043a\u043b\u0430\u0441\u0441": "Light freighter",
+    "\u0441\u043f\u0438\u0441\u043e\u043a \u043f\u0438\u043b\u043e\u0442\u043e\u0432": [
+        {
+            "name": "Chewbacca",
+            "height": "228",
+            "mass": "112",
+            "homeworld": "https://swapi.dev/api/planets/14/",
+            "homeworld_info": {
+                "name": "Kashyyyk",
+                "rotation_period": "26",
+                "orbital_period": "381",
+                "diameter": "12765",
+                "climate": "tropical",
+                "gravity": "1 standard",
+                "terrain": "jungle, forests, lakes, rivers",
+                "surface_water": "60",
+                "population": "45000000",
+                "residents": [
+                    "https://swapi.dev/api/people/13/",
+                    "https://swapi.dev/api/people/80/"
+                ],
+                "films": [
+                    "https://swapi.dev/api/films/6/"
+                ],
+                "created": "2014-12-10T13:32:00.124000Z",
+                "edited": "2014-12-20T20:58:18.442000Z",
+                "url": "https://swapi.dev/api/planets/14/"
+            }
+        },
+        {
+            "name": "Han Solo",
+            "height": "180",
+            "mass": "80",
+            "homeworld": "https://swapi.dev/api/planets/22/",
+            "homeworld_info": {
+                "name": "Corellia",
+                "rotation_period": "25",
+                "orbital_period": "329",
+                "diameter": "11000",
+                "climate": "temperate",
+                "gravity": "1 standard",
+                "terrain": "plains, urban, hills, forests",
+                "surface_water": "70",
+                "population": "3000000000",
+                "residents": [
+                    "https://swapi.dev/api/people/14/",
+                    "https://swapi.dev/api/people/18/"
+                ],
+                "films": [],
+                "created": "2014-12-10T16:49:12.453000Z",
+                "edited": "2014-12-20T20:58:18.456000Z",
+                "url": "https://swapi.dev/api/planets/22/"
+            }
+        },
+        {
+            "name": "Lando Calrissian",
+            "height": "177",
+            "mass": "79",
+            "homeworld": "https://swapi.dev/api/planets/30/",
+            "homeworld_info": {
+                "name": "Socorro",
+                "rotation_period": "20",
+                "orbital_period": "326",
+                "diameter": "0",
+                "climate": "arid",
+                "gravity": "1 standard",
+                "terrain": "deserts, mountains",
+                "surface_water": "unknown",
+                "population": "300000000",
+                "residents": [
+                    "https://swapi.dev/api/people/25/"
+                ],
+                "films": [],
+                "created": "2014-12-15T12:56:31.121000Z",
+                "edited": "2014-12-20T20:58:18.469000Z",
+                "url": "https://swapi.dev/api/planets/30/"
+            }
+        },
+        {
+            "name": "Nien Nunb",
+            "height": "160",
+            "mass": "68",
+            "homeworld": "https://swapi.dev/api/planets/33/",
+            "homeworld_info": {
+                "name": "Sullust",
+                "rotation_period": "20",
+                "orbital_period": "263",
+                "diameter": "12780",
+                "climate": "superheated",
+                "gravity": "1",
+                "terrain": "mountains, volcanoes, rocky deserts",
+                "surface_water": "5",
+                "population": "18500000000",
+                "residents": [
+                    "https://swapi.dev/api/people/31/"
+                ],
+                "films": [],
+                "created": "2014-12-18T11:25:40.243000Z",
+                "edited": "2014-12-20T20:58:18.474000Z",
+                "url": "https://swapi.dev/api/planets/33/"
+            }
+        }
+    ]
+}

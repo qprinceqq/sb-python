@@ -1,6 +1,7 @@
 with open("people.txt", "r", encoding="utf-8") as file:
     lines = file.readlines()
 
+
 def check_n_count_list(lines):
     error_log = []
     i = 0
@@ -18,6 +19,7 @@ def check_n_count_list(lines):
         except ValueError:
             pass
     return error_log, count
+
 
 error_log, count, = check_n_count_list(lines)
 for i in error_log: print(f"Ошибка: менее трёх символов в строке {i}.")

@@ -22,7 +22,7 @@ class Matrix:
 
     def multiply(self, matrix):
         if self.cols != matrix.rows:
-            return "Невозможно умножить матрицы"
+            return "Умножение невозможно: кол-во столбцов матрицы 1 должно быть равно кол-ву строк матрицы 2"
         else:
             for i in range(self.rows):
                 for j in range(matrix.cols):
