@@ -1,7 +1,7 @@
 class Cell:
     def __init__(self, number):
         self.number = number
-        self.occupied = False
+        self.filled = False
         self.symbol = ' '
 
 
@@ -11,8 +11,8 @@ class Board:
 
     def change_cell_state(self, cell_number, symbol):
         cell = self.cells[cell_number - 1]
-        if not cell.occupied:
-            cell.occupied = True
+        if not cell.filled:
+            cell.filled = True
             cell.symbol = symbol
             return True
         else:
@@ -40,16 +40,17 @@ class Board:
 
 
 class Player:
-    def __init__(self, name):
+    def __init__(self, name, sign):
         self.name = name
         self.wins = 0
+        self.sign = sign
 
     def make_move(self, board):
         while True:
             try:
                 move = int(input(f"{self.name}, введите номер ячейки, которую хотите отметить: "))
                 if move in range(1, 10):
-                    if board.change_cell_state(move, 'X' if self.name == "Алиса" else 'O'):
+                    if board.change_cell_state(move, self.sign):
                         return
                     else:
                         print("Эта ячейка уже занята. Пожалуйста, выберите другую.")
@@ -63,10 +64,12 @@ class Game:
     def __init__(self, player1, player2):
         self.board = Board()
         self.players = [player1, player2]
+        self.step = 0
 
     def play_turn(self, player):
         self.board.display_board()
         player.make_move(self.board)
+        self.step += 1
         return self.board.check_game_end()
 
     def play_game(self):
@@ -79,10 +82,10 @@ class Game:
     def start_game(self):
         while True:
             if self.play_game():
+                self.step -= 1
                 print(
-                    f"Поздравляем! {self.players[0].name if self.board.check_game_end() else self.players[1].name} победил(а)!")
-                self.players[0].wins += 1 if self.board.check_game_end() else 0
-                self.players[1].wins += 1 if not self.board.check_game_end() else 0
+                    f"Поздравляем! {self.players[self.step % 2].name} победил(а)!")
+                self.players[self.step % 2].wins += 1
             else:
                 print("Ничья!")
 
@@ -93,7 +96,7 @@ class Game:
                 play_again = input("Хотите сыграть еще раз? (да/нет): ")
                 if play_again.lower() == "да":
                     for cell in self.board.cells:
-                        cell.occupied = False
+                        cell.filled = False
                         cell.symbol = ' '
                     break
                 elif play_again.lower() == "нет":
@@ -101,7 +104,9 @@ class Game:
                 print("Неверный ввод. Пожалуйста, введите 'да' или 'нет'.")
 
 
-player1 = Player("Алексей")
-player2 = Player("Лёша")
-game = Game(player1, player2)
+input1 = input("Игрок 1. Через пробел введите имя и символ, которым будете играть: ").split()
+player_1 = Player(input1[0], input1[1])
+input2 = input("Игрок 2. Через пробел введите имя и символ, которым будете играть: ").split()
+player_2 = Player(input2[0], input2[1])
+game = Game(player_1, player_2)
 game.start_game()
